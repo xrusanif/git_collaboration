@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h1>Here are our recommendations:</h1>
+<ul>
+    {% for title in matched_titles %}  
+        <li>{{ title[0][0] }}</li>
+    {% endfor %}   
+</ul>
+
+{% endblock %}

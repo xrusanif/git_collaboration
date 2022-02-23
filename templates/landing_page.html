@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Welcome to the MOVIE WRECKER!</h1> 
+<h2>Please search for your favorite movies:</h2>
+<form action="{{url_for('give_me_recommendations')}}"> <!-- we pass the name of the function from application.py-->
+    {% for i in range(3) %}
+        <input type="text" name="movies"><br>
+    {% endfor %}
+    <br>
+    <input type="submit">
+</form>
+
+{% endblock %}
+
